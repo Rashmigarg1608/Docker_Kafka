@@ -1,0 +1,10 @@
+FROM openjdk:8-jre-slim
+
+WORKDIR /kafka-server
+
+ADD kafka/ /kafka-server/
+
+CMD  ./bin/kafka-console-consumer.sh --topic test --from-beginning --bootstrap-server server:9092
+ 
+
+
